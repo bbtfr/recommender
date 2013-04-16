@@ -1,0 +1,13 @@
+<h3>Recommends</h3>
+
+<table class="table">
+  <thead>
+    <th>Title</th>
+    <th>Dynamic Fields</th>
+    <th></th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<a href="#recommends/new" class="btn new">New</a>

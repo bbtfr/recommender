@@ -1,0 +1,9 @@
+<td data-key="product_id" contenteditable><%= @model.get 'product_id' %></td>
+<% dynamic_attributes = @model.get 'dynamic_attributes' %>
+<% dynamic_attributes ||= {} %>
+<% for dynamic_field in @collection.parent.get 'dynamic_fields': %>
+  <td data-key="dynamic_attributes" data-subkey="<%= dynamic_field %>" contenteditable><%= dynamic_attributes[dynamic_field] %></td>
+<% end %>
+<td>
+  <a class="btn btn-mini destroy" href="#recommends/<%= @collection.parent.id %>/products/<%= @model.id %>/destroy">Destroy</a>
+</td>

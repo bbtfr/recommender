@@ -1,0 +1,4 @@
+<div class="input-append">
+  <input class="span2" type="text" name="dynamic_fields[]" id="dynamic_field" value="<%= @dynamic_field %>" >
+  <a class="btn remove_dynamic_field" type="button">Remove</a>
+</div>

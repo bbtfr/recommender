@@ -1,0 +1,14 @@
+_.extend(Backbone.Model.prototype, Backbone.Validation.mixin)
+
+window.Recommender =
+  Models: {}
+  Collections: {}
+  Views: {}
+  Routers: {}
+  initialize: -> 
+    Recommender.Collections.Recommends::url = '/recommender/recommends'
+    new Recommender.Routers.Recommends()
+    Backbone.history.start()
+
+$(document).ready ->
+  Recommender.initialize()

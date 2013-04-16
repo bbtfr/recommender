@@ -1,0 +1,19 @@
+<h3>Recommend <%= @collection.parent.id %> Resources</h3>
+
+<table class="table">
+  <thead>
+    <th>Resource ID</th>
+    <% for dynamic_field in @collection.parent.get 'dynamic_fields': %>
+      <th><%= dynamic_field %></th>
+    <% end %>
+    <th></th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<a href="#recommends/<%= @collection.parent.id %>/resources/new" class="btn new">New</a>
+<div class="pull-right">
+  <a href="#recommends" class="btn return">Return</a>
+  <a href="#recommends" class="btn btn-primary save">Save All Resources</a>
+</div>

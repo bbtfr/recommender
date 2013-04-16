@@ -1,0 +1,3 @@
+<div class="span12">
+  <h3>Your best choice is: <%= @product.get 'product_id' %></h3>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recommend: 
+  resource: 
+  dynamic_attributes: 
+
+two:
+  recommend: 
+  resource: 
+  dynamic_attributes: 

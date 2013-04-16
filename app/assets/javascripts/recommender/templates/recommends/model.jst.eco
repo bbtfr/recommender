@@ -1,0 +1,9 @@
+<td><%= @model.get 'title' %></td>
+<td><%= @model.get 'dynamic_fields' %></td>
+<td>
+  <a class="btn btn-mini edit" href="#recommends/<%= @model.id %>/edit">Edit</a>
+  <a class="btn btn-mini destroy" href="#recommends/<%= @model.id %>/destroy">Destroy</a>
+  <a class="btn btn-mini" href="#recommends/<%= @model.id %>/products">List All Products</a>
+  <a class="btn btn-mini" href="#recommends/<%= @model.id %>/resources">List All Resources</a>
+  <a class="btn btn-mini" href="#recommends/<%= @model.id %>">Show It!</a>
+</td>

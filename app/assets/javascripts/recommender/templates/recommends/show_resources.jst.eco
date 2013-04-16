@@ -1,0 +1,11 @@
+<% for resource in @resources: %>
+  <div class="span6">
+    <a class="next" data-id="<%= resource.id %>">
+      <h3><%= resource.get 'resource_id' %></h3>
+    </a>
+  </div>
+<% end %>
+
+<% if @page > 0: %>
+  <a class="btn pre">Go Back</a>
+<% end %>
