@@ -3,7 +3,6 @@ class Recommender.Routers.Recommends extends Backbone.Router
     'recommends': 'index'
     'recommends/:id/products': 'products'
     'recommends/:id/resources': 'resources'
-    'recommends/:id': 'show'
     '.*': 'index'
 
   initialize: (options) ->
@@ -19,13 +18,6 @@ class Recommender.Routers.Recommends extends Backbone.Router
       @collection.once 'reset', callback
     else
       callback()
-
-  show: (id) ->
-    @display =>
-      model = @collection.get(id)
-      model.resources().fetch(reset: true)
-      view = new Recommender.Views.RecommendsShow(model: model)
-      $('#container').html(view.render().el)
 
   products: (id) ->
     @display =>

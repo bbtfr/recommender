@@ -2,8 +2,8 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    Recommender.Collections.Recommends.prototype.url = '<%= recommends_path %>';
-    new Recommender.Routers.Recommends();
+    Recommender.Models.Recommend.prototype.url = '<%= recommend_path(@recommend) %>';
+    new Recommender.Routers.RecommendShow();
     Backbone.history.start();
   })
 </script>

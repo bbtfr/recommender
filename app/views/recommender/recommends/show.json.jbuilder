@@ -1,0 +1,1 @@
+json.partial! "model", recommend: @recommend

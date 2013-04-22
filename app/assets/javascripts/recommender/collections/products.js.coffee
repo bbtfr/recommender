@@ -4,5 +4,5 @@ class Recommender.Collections.Products extends Backbone.Collection
 
   initialize: (parent) ->
     @parent = parent
-    @url = parent.url() + '/products'
+    @url = _.result(parent, 'url') + '/products'
     @on("reset", parent.updateCounts)

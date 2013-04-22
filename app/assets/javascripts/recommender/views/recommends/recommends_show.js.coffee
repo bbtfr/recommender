@@ -12,7 +12,7 @@ class Recommender.Views.RecommendsShow extends Backbone.View
     @resource_collection = @model.resources()
     @page = 0
     @choices = []
-    @model.on('reset', @render, this)
+    @model.on('change:title', @updateTitle, this)
     @resource_collection.on('reset', @resources, this)
 
   next_page: (e) ->
@@ -22,7 +22,7 @@ class Recommender.Views.RecommendsShow extends Backbone.View
     if @page < @page_total
       @resources()
     else
-      $.post "#{@model.url()}/choice", choices: @choices, (data) =>
+      $.post "#{_.result(@model, 'url')}/choice", choices: @choices, (data) =>
         product = new Recommender.Models.Product(data)
         @$("#resources").html(@choice_template(product: product))
         
@@ -33,6 +33,9 @@ class Recommender.Views.RecommendsShow extends Backbone.View
     @resources()
 
     false
+
+  updateTitle: ->
+    @$("#title").text(@model.get 'title')
 
   resources: ->
     @page_total ||= @resource_collection.length / 2

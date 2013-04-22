@@ -4,5 +4,5 @@ class Recommender.Collections.Resources extends Backbone.Collection
 
   initialize: (parent) ->
     @parent = parent
-    @url = parent.url() + '/resources'
+    @url = _.result(parent, 'url') + '/resources'
     @on("reset", parent.updateCounts)

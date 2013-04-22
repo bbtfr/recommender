@@ -5,10 +5,3 @@ window.Recommender =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> 
-    Recommender.Collections.Recommends::url = '/recommender/recommends'
-    new Recommender.Routers.Recommends()
-    Backbone.history.start()
-
-$(document).ready ->
-  Recommender.initialize()

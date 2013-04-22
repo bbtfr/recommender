@@ -5,5 +5,5 @@
   <a class="btn btn-mini destroy" href="#recommends/<%= @model.id %>/destroy">Destroy</a>
   <a class="btn btn-mini" href="#recommends/<%= @model.id %>/products">List All Products</a>
   <a class="btn btn-mini" href="#recommends/<%= @model.id %>/resources">List All Resources</a>
-  <a class="btn btn-mini" href="#recommends/<%= @model.id %>">Show It!</a>
+  <a class="btn btn-mini" href="<%= @model.get 'url' %>">Show It!</a>
 </td>

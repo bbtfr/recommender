@@ -9,16 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap
+ *= require recommender
  *= require_self
  *= require_tree .
  */
-
-.modal form {
-  margin-bottom: 0;
-}
-
-.controls {
-  .input-append {
-    margin-top: 10px;
-  }
-}
