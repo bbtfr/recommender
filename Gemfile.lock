@@ -44,6 +44,10 @@ GEM
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -77,6 +81,12 @@ GEM
       railties
     mime-types (1.22)
     multi_json (1.7.2)
+    paperclip (3.4.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.0)
+      mime-types
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -136,6 +146,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   meta_request
+  paperclip (~> 3.2)
   recommender!
   sass-rails
   sqlite3

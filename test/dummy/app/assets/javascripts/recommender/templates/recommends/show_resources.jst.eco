@@ -1,0 +1,11 @@
+<% for resource in @resources: %>
+  <div class="span6">
+    <a class="next" data-id="<%= resource.id %>">
+      <h3><img src="<%= resource.get('extra').image_path %>"></h3>
+    </a>
+  </div>
+<% end %>
+<div class="row cleanfix"></div>
+<% if @page > 0: %>
+  <a class="btn pre">Go Back</a>
+<% end %>

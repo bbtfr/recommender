@@ -27,3 +27,6 @@ gem "thin"
 group :development do
   gem 'meta_request'
 end
+
+gem "paperclip", '~> 3.2'
+gem 'yaml_db'

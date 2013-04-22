@@ -1,0 +1,6 @@
+<div class="span12">
+  <h3>Your best choice is: <%= @product.get('extra').title %></h3>
+  <img src="<%= @product.get('extra').image_path %>">
+</div>
+<div class="row cleanfix"></div>
+<a class="btn retry">Retry</a>

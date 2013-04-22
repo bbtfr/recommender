@@ -26,9 +26,10 @@ module Recommender
     end
 
     def choice
-      recommend = Recommend.find(params[:id])
-      resources = Resource.find_all_by_id(params[:choices])
-      render json: recommend.get_closest(resources)
+      @recommend = Recommend.find(params[:id])
+      @resources = Resource.find_all_by_id(params[:choices])
+      @product = @recommend.get_closest(@resources)
+      render partial: 'recommender/products/model', locals: { product: @product }
     end
 
     private

@@ -16,3 +16,4 @@
 //= require underscore
 //= require backbone
 //= require recommender
+//= require_tree ./recommender/templates

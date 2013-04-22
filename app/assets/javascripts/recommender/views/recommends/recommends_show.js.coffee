@@ -7,6 +7,7 @@ class Recommender.Views.RecommendsShow extends Backbone.View
   events:
     "click .next": "next_page"
     "click .pre": "pre_page"
+    "click .retry": "retry"
 
   initialize: (options) ->
     @resource_collection = @model.resources()
@@ -33,6 +34,11 @@ class Recommender.Views.RecommendsShow extends Backbone.View
     @resources()
 
     false
+
+  retry: (e) ->
+    @page = 0
+    @choices = []
+    @resources()
 
   updateTitle: ->
     @$("#title").text(@model.get 'title')
