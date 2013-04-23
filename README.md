@@ -17,7 +17,6 @@ Recommender use backbone, bootstrap for frontend pages, and jbuilder to generate
 So you also need to add those gems.
 
 ```ruby
-# Spree 1.3.x
 gem 'recommender', :github => 'bbtfr/recommender'
 
 gem 'backbone-on-rails'
