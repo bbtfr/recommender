@@ -17,7 +17,6 @@ Recommender use backbone, bootstrap for frontend pages, and jbuilder to generate
 So you also need to add those gems.
 
 ```ruby
-# Spree 1.3.x
 gem 'recommender', :github => 'bbtfr/recommender'
 
 gem 'backbone-on-rails'
@@ -36,7 +35,7 @@ rails g recommender
 Demo
 ------------------------------------------------------------------------------
 
-You can easily use the `test/dummy` app as a demo of spree_essential_blog. Just `cd` to where you develop and run:
+You can easily use the `test/dummy` app as a demo of recommender. Just `cd` to where you develop and run:
   
 ```bash  
 git clone git://github.com/bbtfr/recommender.git
